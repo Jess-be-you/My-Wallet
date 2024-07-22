@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/accountant.png" type="image/icon type">
+    <title>My Wallet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <h1>MY WALLET</h1>
+        <!-- header component to show the balance,income and expense in my Wallet -->
+        <header>
+            <div>
+                <h5>Total Balance</h5>
+                <span id="balance">0.00</span>
+            </div>
+            <div>
+                <h5>Income</h5>
+                <span id="income">0.00</span>
+            </div>
+            <div>
+                <h5>Expense</h5>
+                <span id="expense">0.00</span>
+            </div>
+        </header>
+        <!-- section to add transactions to the wallet -->
+        <section>
+            <h3>Add Transactions</h3>
+            <form id="transactionForm">
+                <label for="type">Transaction Type:</label>
+                <select name="type" id="type">
+                    <option value="1">Expense</option>
+                    <option value="2">Income</option>
+                </select>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" required />
+                </div>
+                <div>
+                    <label for="amount">Amount</label>
+                    <input 
+                        type="number" 
+                        name="amount"
+                        value="0" 
+                        min="0.01"
+                        step="0.01"
+                        required 
+                    />
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" required />
+                </div>
+                <button>SUBMIT</button>
+            </form>
+        </section>
+        <!-- Section Transactions is to list the transactions that are done in my Wallet -->
+        <section>
+            <h3>Transactions</h3>
+            <ul id="transactionList"></ul>
+            <div id="status"></div>
+        </section>
+    </main>
+    <!-- Customized Javascript code for my wallet -->
+    <script src="script.js"></script>
+</body>
+</html>
