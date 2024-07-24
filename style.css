@@ -96,7 +96,7 @@ input#type{
     align-items: center;
     justify-content: center;
     display: flex;
-    padding:8px; 
+    padding:8px;
     background:rgb(220, 214, 214);
     color: var(--bg-color);
     border-radius:5px;
@@ -178,4 +178,10 @@ ul li:hover .action{
     width:36px;
     height:36px;
     cursor:pointer;
+}
+
+@media only screen and (max-width:600px) {
+  main {
+    margin: auto ;
+  }
 }
